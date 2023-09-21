@@ -3,11 +3,11 @@ Create un nuovo progetto utilizzando Vite: aiutatevi con le slide per ripercorre
 Modificate il componente App.vue, che deve usare l'option api, e poi nel template stampate in pagina un titolo hello Vite ✔️
 Bonus:
 Create e utilizzate un componente AppTitle, il quale contiene un titolo che recita "La mia prima app con Vite!" ✔️
-Creare un secondo componente AppHero, che visualizza un jumbotron.-->
+Creare un secondo componente AppHero, che visualizza un jumbotron.✔️-->
 
 <script>
 import AppTitle from './components/AppTitle.vue';
-
+import AppHero from './components/AppHero.vue'
 
 export default {
   data() {
@@ -15,13 +15,19 @@ export default {
       message: 'Hello Vite!'
     };
   },
-  components: { AppTitle }
+  components: {
+    AppTitle,
+    AppHero
+  }
 }
 </script>
 
 <template>
-  <AppTitle />
-  <h1>{{ message }}</h1>
+  <div class="card">
+    <AppTitle />
+    <h1>{{ message }}</h1>
+    <AppHero />
+  </div>
 </template>
 
 <style>
